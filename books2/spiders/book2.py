@@ -6,7 +6,7 @@ from itemloaders.processors import MapCompose
 class BookSpider(scrapy.Spider):
     name = "book2"
     allowed_domains = ["books.toscrape.com"]
-    start_urls = ["https://books.toscrape.com/catalogue/page-50.html"]
+    start_urls = ["https://books.toscrape.com"]
 
     def parse(self, response):
         for book in response.xpath('//div/ol/li'):

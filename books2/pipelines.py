@@ -16,7 +16,7 @@ class MysqlPipeline:
         ## Create cursor, used to execute commands
         self.cur = self.conn.cursor()
 
-        # self.cur.execute("""DROP table book""")
+        self.cur.execute("""DROP table book""")
         ## Create quotes table if none exists
         self.cur.execute("""
         CREATE TABLE IF NOT EXISTS book(
