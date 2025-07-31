@@ -12,12 +12,10 @@ BOT_NAME = "books2"
 SPIDER_MODULES = ["books2.spiders"]
 NEWSPIDER_MODULE = "books2.spiders"
 ITEM_PIPELINES = {
-   "books2.pipelines.MysqlDemoPipeline": 300,
-   "books2.pipelines.SqliteDemoPipeline": 301,
-    "books2.pipelines.Books2Pipeline": 1
+   "books2.pipelines.MysqlPipeline": 1,
 }
 
-IMAGES_STORE = '/home/percy/Downloads/books'
+# IMAGES_STORE = '/home/percy/Downloads/books'
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = "books2 (+http://www.yourdomain.com)"
 

@@ -16,7 +16,6 @@ class BookSpider(scrapy.Spider):
             item.add_css('price','p.price_color::text')
             item.add_css('rating','p[class~="star-rating"]::attr(class)')
             item.add_css('image_url','.image_container a img::attr(src)',MapCompose(lambda t: response.urljoin(t)))
-            item.add_css('image_urls','.image_container a img::attr(src)',MapCompose(lambda t: response.urljoin(t)))
             yield item.load_item()
 
         next_page = response.xpath('//li[@class="next"]/a/@href').get()

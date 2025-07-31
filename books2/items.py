@@ -3,9 +3,9 @@ import scrapy
 import re
 
 
-def get_rating(i):
-    return re.search('rating\s*(\S*)',i).group(1)
-
+def get_rating(i) -> str:
+    result = re.search(r'\s+(\w*)',i)
+    return result.group(1) if result else ""
 
 class Books2Item(scrapy.Item):
     # define the fields for your item here like:
